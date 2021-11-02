@@ -1,8 +1,19 @@
+#surveyform{
+    width: 700px; 
+    margin: auto;
+}
+
 .form-group{
     margin-top: 20px;
 }
 
 #agreeterms{
     margin-top: 20px;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
+}
+
+#button{
+    width: 200px;
+    margin-left: 250px;
+    margin-bottom: 30px;
 }

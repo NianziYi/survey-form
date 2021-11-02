@@ -16,49 +16,71 @@
     <h1 class="text-center">Data Survey Form</h1>
     <h5 class="text-center">(* denotes mandatory fields)</h5>
 
-    <form action="" style="width: 700px; margin: auto;">
-        <div class="form-group">
-            <label for="firstname">*Firstname</label>
-            <input type="text" name="firstname" id="firstname" class="form-control" placeholder="firstname">
-        </div>
-        <div class="form-group">
-            <label for="lastname">*Lastname</label>
-            <input type="text" name="lastname" id="lastname" class="form-control" placeholder="lastname">
+    <form action="" id="surveyform" class="needs-validation" novalidate>
+        <div class="row">
+            <div class="form-group col-md-6">
+                <label for="firstname">*Firstname</label>
+                <input type="text" name="firstname" id="firstname" class="form-control" placeholder="firstname" required
+                    maxlength="40">
+                <div class="valid-feedback">Looks good!</div>
+                <div class="invalid-feedback">Please enter firstname that is up to 40 characters</div>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="lastname">*Lastname</label>
+                <input type="text" name="lastname" id="lastname" class="form-control" placeholder="lastname" required
+                    maxlength="40">
+                <div class="valid-feedback">Looks good!</div>
+                <div class="invalid-feedback">Please enter lastname that is up to 40 characters</div>
+            </div>
         </div>
         <div class="form-group">
             <label for="title">*Preferred Title</label>
-            <select name="title" id="title" class="form-control form-select">
+            <select name="title" id="title" class="form-control form-select" required>
                 <option value="none">none</option>
                 <option value="student">student</option>
                 <option value="professor">prefessor</option>
                 <option value="staff">staff</option>
                 <option value="retired">retired</option>
             </select>
+            <div class="valid-feedback">Looks good!</div>
         </div>
         <div class="form-group">
             <label for="height">Your Height (inches)</label>
             <input type="number" name="height" id="height" class="form-control" placeholder="your height">
+            <div class="invalid-feedback">Please enter numbers</div>
         </div>
         <div class="form-group">
             <label for="phone">Phone</label>
-            <input type="tel" name="phone" id="phone" class="form-control" placeholder="phone number">
+            <input type="tel" name="phone" id="phone" class="form-control" placeholder="phone number" pattern="^\d{10}$">
+            <div class="invalid-feedback">Please enter 10 digits phone number</div>
         </div>
         <div class="form-group">
             <label for="address">*Address</label>
-            <input type="text" name="address" id="address" class="form-control" placeholder="apartment,floor,or studio">
+            <input type="text" name="address" id="address" class="form-control" placeholder="apartment,floor,or studio"
+                required maxlength="40">
+            <div class="valid-feedback">Looks good!</div>
+            <div class="invalid-feedback">Please enter address that is up to 40 characters</div>
         </div>
         <div class="row">
             <div class="form-group col-md-5">
                 <label for="city">*City</label>
-                <input type="text" name="city" id="city" class="form-control" placeholder="city">
+                <input type="text" name="city" id="city" class="form-control" placeholder="city" required
+                    maxlength="40">
+                <div class="valid-feedback">Looks good!</div>
+                <div class="invalid-feedback">Please enter city that is up to 40 characters</div>
             </div>
             <div class="form-group col-md-5">
                 <label for="state">*State</label>
-                <input type="text" name="state" id="state" class="form-control" placeholder="state">
+                <input type="text" name="state" id="state" class="form-control" placeholder="state" required
+                    maxlength="40">
+                <div class="valid-feedback">Looks good!</div>
+                <div class="invalid-feedback">Please enter state that is up to 40 characters</div>
             </div>
             <div class="form-group col-md-2">
                 <label for="zip">*Zipcode</label>
-                <input type="text" name="zip" id="zip" class="form-control" placeholder="zipcode">
+                <input type="tel" name="zip" id="zip" class="form-control" placeholder="zipcode" required pattern="^\d{5}$">
+                <div class="valid-feedback">Looks good!</div>
+                <div class="invalid-feedback">Please enter 5 positive digits zipcode</div>
             </div>
         </div>
         <div class="form-group">
@@ -92,23 +114,29 @@
         <div class="form-group">
             <label for="budget">Your monthly budget for services</label>
             <select name="budget" id="budget" class="form-control form-select">
+                <option selected>Select your budget</option>
                 <option value="less">less than $50</option>
                 <option value="between">between $50 and $100</option>
                 <option value="above">above $100</option>
             </select>
         </div>
         <div class="form-group">
-            <label for="email">Your e-mail</label>
-            <input type="email" name="email" id="emial" class="form-control" placeholder="your e-mail">
+            <label for="email">*Your e-mail</label>
+            <input type="email" name="email" id="emial" class="form-control" placeholder="your e-mail" required>
+            <div class="valid-feedback">Looks good!</div>
+            <div class="invalid-feedback">Please enter correct email address</div>
         </div>
         <div class="form-check" id="agreeterms">
-            <input type="checkbox" class="form-check-input" id="terms">
-            <label class="form-check-label" for="terms">*I Agree to terms</label>
+            <input type="checkbox" class="form-check-input" id="terms" required>
+            <label class="form-check-label" for="terms">*I Agree to <a href="http://www.sfsu.edu">terms</a></label>
+            <div class="invalid-feedback">You must agree before submitting</div>
         </div>
+        <button type="submit" class="btn btn-outline-success btn-lg" id="button">Submit</button>
     </form>
 
 
 
+    <script src="validation.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
