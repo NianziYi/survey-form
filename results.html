@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Results Verificaion</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1 class="text-center">Results Verification Page Nianzi Yi</h1>
+    <div id="resultform">
+        <div class="row">
+            <div class="col-md-6">
+                *Firstname: <span id="result-first"></span>
+            </div>
+            <div class="col-md-6">
+                *Lastname: <span id="result-last"></span>
+            </div>
+        </div>
+        <div>
+            *Preferred Title: <span id="result-title"></span>
+        </div>
+        <div>
+            Your Height (inches): <span id="result-height"></span>
+        </div>
+        <div>
+            Phone: <span id="result-phone"></span>
+        </div>
+        <div>
+            *Address: <span id="result-address"></span>
+        </div>
+        <div class="row">
+            <div class="col-md-5">
+                *City: <span id="result-city"></span>
+            </div>
+            <div class="col-md-5">
+                *State: <span id="result-state"></span>
+            </div>
+            <div class="col-md-2">
+                *Zipcode: <span id="result-zip"></span>
+            </div>
+        </div>
+        <div id="map"></div>
+        <div>
+            Checked Service: <span id="result-service"></span>
+        </div>
+        <div>
+            Budget: <span id="result-budget"></span>
+        </div>
+        <div>
+            *Email: <span id="result-email"></span>
+        </div>
+    </div>
+
+    <script src="results.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD73uJcWWHFE-mH05UhTNBAhVGU83a2TJw&callback=initMap&libraries=&v=weekly"
+        async></script>
+        
+</body>
+
+</html>
