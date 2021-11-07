@@ -8,12 +8,29 @@
 }
 
 #agreeterms{
+    font-weight: 600;
     margin-top: 20px;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
 }
 
 #button{
+    font-weight: bold;
     width: 200px;
     margin-left: 250px;
     margin-bottom: 30px;
 }
+
+#resultform{
+    width: 900px; 
+    margin: auto;
+    margin-top: 50px;
+}
+
+#map {
+    height: 400px;
+    /* The height is 400 pixels */
+    width: 100%;
+    /* The width is the width of the web page */
+  }
+
+

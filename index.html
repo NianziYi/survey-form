@@ -16,7 +16,7 @@
     <h1 class="text-center">Data Survey Form</h1>
     <h5 class="text-center">(* denotes mandatory fields)</h5>
 
-    <form action="" id="surveyform" class="needs-validation" novalidate>
+    <form action="results.html" id="surveyform" class="needs-validation" novalidate>
         <div class="row">
             <div class="form-group col-md-6">
                 <label for="firstname">*Firstname</label>
@@ -36,11 +36,11 @@
         <div class="form-group">
             <label for="title">*Preferred Title</label>
             <select name="title" id="title" class="form-control form-select" required>
-                <option value="none">none</option>
-                <option value="student">student</option>
-                <option value="professor">prefessor</option>
-                <option value="staff">staff</option>
-                <option value="retired">retired</option>
+                <option>none</option>
+                <option>student</option>
+                <option>prefessor</option>
+                <option>staff</option>
+                <option>retired</option>
             </select>
             <div class="valid-feedback">Looks good!</div>
         </div>
@@ -50,7 +50,7 @@
             <div class="invalid-feedback">Please enter numbers</div>
         </div>
         <div class="form-group">
-            <label for="phone">Phone</label>
+            <label for="phone">Phone (format: xxxxxxxxxx)</label>
             <input type="tel" name="phone" id="phone" class="form-control" placeholder="phone number" pattern="^\d{10}$">
             <div class="invalid-feedback">Please enter 10 digits phone number</div>
         </div>
@@ -84,40 +84,40 @@
             </div>
         </div>
         <div class="form-group">
-            <label for="service">Check all services you require</label>
+            <label for="service" id="service">Check all services you require</label>
             <br>
             <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" id="service1" value="service1">
-                <label class="form-check-label" for="service1">e-mail</label>
+                <input class="form-check-input" name="service" type="checkbox" id="service1" value=" E-mail">
+                <label class="form-check-label" for="service1">E-mail</label>
             </div>
             <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" id="service2" value="service2">
-                <label class="form-check-label" for="service2">phone</label>
+                <input class="form-check-input" name="service" type="checkbox" id="service2" value=" Phone">
+                <label class="form-check-label" for="service2">Phone</label>
             </div>
             <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" id="service3" value="service3">
+                <input class="form-check-input" name="service" type="checkbox" id="service3" value=" Facebook">
                 <label class="form-check-label" for="service3">Facebook</label>
             </div>
             <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" id="service4" value="service4">
+                <input class="form-check-input" name="service" type="checkbox" id="service4" value=" Twitter">
                 <label class="form-check-label" for="service4">Twitter</label>
             </div>
             <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" id="service5" value="service5">
-                <label class="form-check-label" for="service5">surface mail</label>
+                <input class="form-check-input" name="service" type="checkbox" id="service5" value=" Surface mail">
+                <label class="form-check-label" for="service5">Surface mail</label>
             </div>
             <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" id="service6" value="service6">
-                <label class="form-check-label" for="service6">personal visit</label>
+                <input class="form-check-input" name="service" type="checkbox" id="service6" value=" Personal visit">
+                <label class="form-check-label" for="service6">Personal visit</label>
             </div>
         </div>
         <div class="form-group">
             <label for="budget">Your monthly budget for services</label>
             <select name="budget" id="budget" class="form-control form-select">
                 <option selected>Select your budget</option>
-                <option value="less">less than $50</option>
-                <option value="between">between $50 and $100</option>
-                <option value="above">above $100</option>
+                <option>less than $50</option>
+                <option>between $50 and $100</option>
+                <option>above $100</option>
             </select>
         </div>
         <div class="form-group">
