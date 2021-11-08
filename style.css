@@ -26,11 +26,23 @@
     margin-top: 50px;
 }
 
-#map {
+.result{
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+#resultMail{
+    margin-bottom: 100px;
+}
+
+label{
+    font-weight:450;
+    color: rgb(3, 54, 26);
+}
+
+/*#map {
     height: 400px;
-    /* The height is 400 pixels */
     width: 100%;
-    /* The width is the width of the web page */
-  }
+  }*/
 
 
