@@ -1,6 +1,9 @@
 var fullAddress;
 var lat;
 var lng;
+const parameters = new URLSearchParams(location.search);
+//getCoordinates();
+
 
 //load URL string to results form
 window.addEventListener('load', () => {
@@ -40,19 +43,25 @@ window.addEventListener('load', () => {
     document.getElementById('result-email').innerHTML = email;
 
     //combine user's address, city, state
-    fullAddress = address+city+state;
-    //coor发生在map前，这个map使用response from callback的response
+    //fullAddress = address+city+st
+    
     initMap();
 })
 
 function getCoordinates(){
-    console.log('coor');
     var location = '22 Main st Boston MA';
+
+    var address = parameters.get('address');
+    var city = parameters.get('city');
+    var state = parameters.get('state');
+    fullAddress = address+city+state
+    //var fullAddress = address+city+state;
+    console.log(fullAddress);
 
     //apply geocoding API
     axios.get('https://maps.googleapis.com/maps/api/geocode/json',{
         params:{
-            address:location,
+            address:fullAddress,
             key:'AIzaSyD73uJcWWHFE-mH05UhTNBAhVGU83a2TJw'
         }
     })
@@ -81,7 +90,7 @@ function initMap() {
     const uluru = { lat: latFloat, lng: lngFloat };
     // The map, centered at Uluru
     const map = new google.maps.Map(document.getElementById("map"), {
-      zoom: 4,
+      zoom: 14,
       center: uluru,
     });
     // The marker, positioned at Uluru
