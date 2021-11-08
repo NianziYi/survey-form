@@ -14,54 +14,72 @@
 <body>
     <h1 class="text-center">Results Verification Page Nianzi Yi</h1>
     <div id="resultform">
-        <div class="row">
+        <div class="result row">
             <div class="col-md-6">
-                *Firstname: <span id="result-first"></span>
+                <label>*Firstname: </label>
+                <span id="result-first"></span>
             </div>
             <div class="col-md-6">
-                *Lastname: <span id="result-last"></span>
+                <label>*Lastname: </label>
+                <span id="result-last"></span>
             </div>
         </div>
-        <div>
-            *Preferred Title: <span id="result-title"></span>
+        <div class="result">
+            <label>*Preferred Title: </label>
+            <span id="result-title"></span>
         </div>
-        <div>
-            Your Height (inches): <span id="result-height"></span>
+        <div class="result">
+            <label>Your Height (inches): </label>
+            <span id="result-height"></span>
         </div>
-        <div>
-            Phone: <span id="result-phone"></span>
+        <div class="result">
+            <label>Phone: </label>
+            <span id="result-phone"></span>
         </div>
-        <div>
-            *Address: <span id="result-address"></span>
+        <div class="result">
+            <label>*Address: </label>
+            <span id="result-address"></span>
         </div>
-        <div class="row">
-            <div class="col-md-5">
-                *City: <span id="result-city"></span>
+        <div class="result row">
+            <div class="col-md-4">
+                <label>*City: </label>
+                <span id="result-city"></span>
             </div>
-            <div class="col-md-5">
-                *State: <span id="result-state"></span>
+            <div class="col-md-4">
+                <label>*State: </label>
+                <span id="result-state"></span>
             </div>
-            <div class="col-md-2">
-                *Zipcode: <span id="result-zip"></span>
+            <div class="col-md-4">
+                <label>*Zipcode: </label>
+                <span id="result-zip"></span>
             </div>
         </div>
-        <div id="map"></div>
-        <div>
-            Checked Service: <span id="result-service"></span>
+        <div class="result">
+            <iframe width="100%" height="350" id="embedMap" src="" allowfullscreen></iframe>
         </div>
-        <div>
-            Budget: <span id="result-budget"></span>
+        <div class="result">
+            <label>Checked Service: </label>
+            <span id="result-service"></span>
         </div>
-        <div>
-            *Email: <span id="result-email"></span>
+        <div class="result">
+            <label>Budget: </label>
+            <span id="result-budget"></span>
+        </div>
+        <div class="result" id="resultMail">
+            <label>*Email: </label>
+            <span id="result-email"></span>
         </div>
     </div>
 
     <script src="results.js"></script>
+
+    <!--  
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD73uJcWWHFE-mH05UhTNBAhVGU83a2TJw&callback=initMap&libraries=&v=weekly"
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD73uJcWWHFE-mH05UhTNBAhVGU83a2TJw&callback=initMap&libraries=&v=weekly"
         async></script>
-        
+    -->
+
 </body>
 
 </html>

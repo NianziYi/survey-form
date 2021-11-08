@@ -1,8 +1,7 @@
-var fullAddress;
+/*var fullAddress;
 var lat;
 var lng;
-const parameters = new URLSearchParams(location.search);
-//getCoordinates();
+const parameters = new URLSearchParams(location.search);*/
 
 
 //load URL string to results form
@@ -43,12 +42,18 @@ window.addEventListener('load', () => {
     document.getElementById('result-email').innerHTML = email;
 
     //combine user's address, city, state
-    //fullAddress = address+city+st
-    
-    initMap();
+    fullAddress = address + city + state
+
+    //set link to display embedMap
+    document.getElementById('embedMap').src = "https://www.google.com/maps/embed/v1/place?key=AIzaSyD73uJcWWHFE-mH05UhTNBAhVGU83a2TJw"
+        + "&q=" + fullAddress;
+
+    //document.getElementById('embedMap').src = "https://maps.google.com/maps?q=" + fullAddress + "&output=embed";
+
+    //initMap();
 })
 
-function getCoordinates(){
+/*function getCoordinates(){
     var location = '22 Main st Boston MA';
 
     var address = parameters.get('address');
@@ -87,7 +92,7 @@ function initMap() {
     var lngFloat = parseFloat(lng)
 
     // The location of Uluru
-    const uluru = { lat: latFloat, lng: lngFloat };
+    const uluru = { lat: 42, lng: 70 };
     // The map, centered at Uluru
     const map = new google.maps.Map(document.getElementById("map"), {
       zoom: 14,
@@ -98,4 +103,4 @@ function initMap() {
       position: uluru,
       map: map,
     });
-  }
+  }*/
