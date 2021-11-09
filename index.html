@@ -14,20 +14,20 @@
 <body>
     <h1 class="text-center">CSC 642 848 Fall 2021 Individual Assignment Nianzi Yi</h1>
     <h1 class="text-center">Data Survey Form</h1>
-    <h5 class="text-center">(* denotes mandatory fields)</h5>
+    <h5 class="text-center" style="color: rgb(0, 0, 255);">(* denotes mandatory fields)</h5>
 
     <form action="results.html" id="surveyform" class="needs-validation" novalidate>
         <div class="row">
             <div class="form-group col-md-6">
                 <label for="firstname">*Firstname</label>
-                <input type="text" name="firstname" id="firstname" class="form-control" placeholder="firstname" required
+                <input type="text" name="firstname" id="firstname" class="form-control" placeholder="John" required
                     maxlength="40">
                 <div class="valid-feedback">Looks good!</div>
                 <div class="invalid-feedback">Please enter firstname that is up to 40 characters</div>
             </div>
             <div class="form-group col-md-6">
                 <label for="lastname">*Lastname</label>
-                <input type="text" name="lastname" id="lastname" class="form-control" placeholder="lastname" required
+                <input type="text" name="lastname" id="lastname" class="form-control" placeholder="Davis" required
                     maxlength="40">
                 <div class="valid-feedback">Looks good!</div>
                 <div class="invalid-feedback">Please enter lastname that is up to 40 characters</div>
@@ -46,39 +46,40 @@
         </div>
         <div class="form-group">
             <label for="height">Your Height (inches)</label>
-            <input type="number" name="height" id="height" class="form-control" placeholder="your height">
+            <input type="number" name="height" id="height" class="form-control" placeholder="please enter numbers">
             <div class="invalid-feedback">Please enter numbers</div>
         </div>
         <div class="form-group">
             <label for="phone">Phone (format: xxxxxxxxxx)</label>
-            <input type="tel" name="phone" id="phone" class="form-control" placeholder="phone number" pattern="^\d{10}$">
+            <input type="tel" name="phone" id="phone" class="form-control" placeholder="1234567890" pattern="^\d{10}$">
             <div class="invalid-feedback">Please enter 10 digits phone number</div>
         </div>
         <div class="form-group">
             <label for="address">*Address</label>
-            <input type="text" name="address" id="address" class="form-control" placeholder="apartment,floor,or studio"
-                required maxlength="40">
+            <input type="text" name="address" id="address" class="form-control" placeholder="1600 Holloway Ave" required
+                maxlength="40" pattern="[a-zA-Z0-9\s]+">
             <div class="valid-feedback">Looks good!</div>
-            <div class="invalid-feedback">Please enter address that is up to 40 characters</div>
+            <div class="invalid-feedback">Please enter address up to 40 characters that are alphabets and numbers</div>
         </div>
         <div class="row">
             <div class="form-group col-md-5">
                 <label for="city">*City</label>
-                <input type="text" name="city" id="city" class="form-control" placeholder="city" required
-                    maxlength="40">
+                <input type="text" name="city" id="city" class="form-control" placeholder="San Francisco" required
+                    maxlength="40" pattern="[a-zA-Z0-9\s]+">
                 <div class="valid-feedback">Looks good!</div>
-                <div class="invalid-feedback">Please enter city that is up to 40 characters</div>
+                <div class="invalid-feedback">Please enter city up to 40 characters that are alphabets and numbers</div>
             </div>
             <div class="form-group col-md-5">
                 <label for="state">*State</label>
-                <input type="text" name="state" id="state" class="form-control" placeholder="state" required
-                    maxlength="40">
+                <input type="text" name="state" id="state" class="form-control" placeholder="CA" required maxlength="40"
+                    pattern="[a-zA-Z0-9\s]+">
                 <div class="valid-feedback">Looks good!</div>
-                <div class="invalid-feedback">Please enter state that is up to 40 characters</div>
+                <div class="invalid-feedback">Please enter state up to 40 characters that are alphabets and numbers</div>
             </div>
             <div class="form-group col-md-2">
                 <label for="zip">*Zipcode</label>
-                <input type="tel" name="zip" id="zip" class="form-control" placeholder="zipcode" required pattern="^\d{5}$">
+                <input type="tel" name="zip" id="zip" class="form-control" placeholder="94132" required
+                    pattern="^\d{5}$">
                 <div class="valid-feedback">Looks good!</div>
                 <div class="invalid-feedback">Please enter 5 positive digits zipcode</div>
             </div>
@@ -122,7 +123,7 @@
         </div>
         <div class="form-group">
             <label for="email">*Your e-mail</label>
-            <input type="email" name="email" id="emial" class="form-control" placeholder="your e-mail" required>
+            <input type="email" name="email" id="emial" class="form-control" placeholder="your@email.com" required>
             <div class="valid-feedback">Looks good!</div>
             <div class="invalid-feedback">Please enter correct email address</div>
         </div>
