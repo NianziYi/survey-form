@@ -10,14 +10,20 @@
 #agreeterms{
     font-weight: 600;
     margin-top: 20px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 #button{
     font-weight: bold;
+    font-size: 30px;
     width: 200px;
     margin-left: 250px;
+    margin-top: 30px;
     margin-bottom: 30px;
+}
+
+#agreeterms{
+    font-size: 20px;
 }
 
 #resultform{
@@ -37,12 +43,6 @@
 
 label{
     font-weight:450;
-    color: rgb(5, 68, 32);
+    font-size: 20px;
+    color: rgb(2, 2, 114);
 }
-
-/*#map {
-    height: 400px;
-    width: 100%;
-  }*/
-
-

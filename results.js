@@ -1,9 +1,3 @@
-/*var fullAddress;
-var lat;
-var lng;
-const parameters = new URLSearchParams(location.search);*/
-
-
 //load URL string to results form
 window.addEventListener('load', () => {
     //use location.search to read from URL
@@ -47,60 +41,4 @@ window.addEventListener('load', () => {
     //set link to display embedMap
     document.getElementById('embedMap').src = "https://www.google.com/maps/embed/v1/place?key=AIzaSyD73uJcWWHFE-mH05UhTNBAhVGU83a2TJw"
         + "&q=" + fullAddress;
-
-    //document.getElementById('embedMap').src = "https://maps.google.com/maps?q=" + fullAddress + "&output=embed";
-
-    //initMap();
 })
-
-/*function getCoordinates(){
-    var location = '22 Main st Boston MA';
-
-    var address = parameters.get('address');
-    var city = parameters.get('city');
-    var state = parameters.get('state');
-    fullAddress = address+city+state
-    //var fullAddress = address+city+state;
-    console.log(fullAddress);
-
-    //apply geocoding API
-    axios.get('https://maps.googleapis.com/maps/api/geocode/json',{
-        params:{
-            address:fullAddress,
-            key:'AIzaSyD73uJcWWHFE-mH05UhTNBAhVGU83a2TJw'
-        }
-    })
-    .then(function(response){
-        console.log(response);
-
-        //get geometry of user's address
-        lat = response.data.results[0].geometry.location.lat;
-        lng = response.data.results[0].geometry.location.lng;
-    })
-    .catch(function(error){
-        console.log(error);
-    });
-}
-
-function initMap() {
-    console.log('init');
-    //get geometry of user's address
-    getCoordinates();
-
-    //convert string to float
-    var latFloat = parseFloat(lat);
-    var lngFloat = parseFloat(lng)
-
-    // The location of Uluru
-    const uluru = { lat: 42, lng: 70 };
-    // The map, centered at Uluru
-    const map = new google.maps.Map(document.getElementById("map"), {
-      zoom: 14,
-      center: uluru,
-    });
-    // The marker, positioned at Uluru
-    const marker = new google.maps.Marker({
-      position: uluru,
-      map: map,
-    });
-  }*/
