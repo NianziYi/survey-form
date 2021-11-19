@@ -4,8 +4,9 @@ This is a project focuses on design and implementation of WWW forms at professio
 # How to run this project
 1. Download this project to local
 2. Open this project in Visual Studio Code
-3. Go to extension section, install "Live Server". (Using a server to host project makes sure Google RECaptcha works properly.)
+3. Go to extension section, install "Live Server". (This step makes sure Google ReCaptcha works properly.)
 4. Right click the "index.html" file, and click "Open with Liver Server" to open data sruvey form.
+5. You can also reach my form though the URL: https://nianziyi.github.io/data-survey-form/ (using my own designed captcha insetad of google ReCaptcha)
 
 # Tools used in this project
 1. For the development, I used Bootstrap 
