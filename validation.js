@@ -17,7 +17,7 @@
 
           //check if recaptcha is checked 
           if (grecaptcha.getResponse() === '') {                            
-            //event.preventDefault();
+            event.preventDefault();
             alert('Please prove you are not a Robot!');
           }
 
