@@ -1,3 +1,4 @@
+/*survey form style*/
 #surveyform{
     width: 700px; 
     margin: auto;
@@ -18,7 +19,7 @@
     font-size: 30px;
     width: 200px;
     margin-left: 250px;
-    margin-top: 30px;
+    margin-top: 40px;
     margin-bottom: 30px;
 }
 
@@ -26,6 +27,21 @@
     font-size: 20px;
 }
 
+/*captcha style*/
+#codeCap{
+    font-weight:600;
+    font-size: 25px;
+    color: rgb(177, 85, 0);
+}
+
+#refresh{
+    font-weight:600;
+    font-size: 20px
+}
+
+
+
+/*result form style*/
 #resultform{
     width: 900px; 
     margin: auto;
